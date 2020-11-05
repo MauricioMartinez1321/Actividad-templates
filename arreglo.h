@@ -11,7 +11,7 @@ class Arreglo{
     T *arreglo;
     size_t tam;
     size_t cont;
-    const static size_t MAX = 5;
+    const static size_t MAX = 10;
 
 public:
     Arreglo();    
@@ -20,6 +20,7 @@ public:
     void insertar_inicio(const T& v);
     void insertar(const T& v, size_t p);
 
+    void mostrar();
     void eliminar_final();
     void eliminar_inicio();
     void eliminar(size_t p);
@@ -89,6 +90,17 @@ void Arreglo<T>::insertar(const T& v, size_t p)
     arreglo[p] = v;
     cont++;
 }
+
+template<class T>
+void Arreglo<T>::mostrar()
+{
+    for(size_t i = 0; i < arreglo->size(); i++){
+        cout<< arreglo[i] << " "; 
+    }
+    cout << endl;
+}
+
+
 
 template<class T>
 void Arreglo<T>::eliminar_final()

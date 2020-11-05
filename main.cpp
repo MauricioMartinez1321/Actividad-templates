@@ -5,20 +5,23 @@ using namespace std;
 
 int main (){
 
-    Arreglo<float> arreglo;
+    Arreglo<string> arreglo;
 
-    for (int i= 0; i < 10; i++){
-        arreglo.insertar_final(i);
-    }
+    arreglo.insertar_final("Mauricio");
+    arreglo.insertar_final("cree");
+    arreglo.insertar_final("poder");
+    arreglo.insertar_final("pasar");
+    arreglo.insertar_final("progra");
+    arreglo.insertar_final("bien");
+    arreglo.mostrar();
 
-    arreglo.insertar(100, 2);
+    arreglo.insertar("no", 1);
+    arreglo.mostrar();
+
     arreglo.eliminar_inicio();
     arreglo.eliminar_final();
     arreglo.eliminar(4);
-    for(size_t i = 0; i < arreglo.size(); i++){
-        cout<< arreglo[i] << " "; 
-    }
-    cout << endl;
+    arreglo.mostrar();
 
     return 0;
 
